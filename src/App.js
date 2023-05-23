@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1>
+  <Movie />
+  <Movie />
+  <Movie />
+  <Movie />
+  </h1>
   );
-}
+};
+
+const Movie = () => {
+  return (
+    <article>
+      <ImageComponent />
+      <TitleComponent />
+    </article>
+  );
+};
+
+const ImageComponent = () => {
+  return (
+    <img
+    src="https://occ-0-4829-2164.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQ_MkVS7SCcEaSTGunJa3oFnVSMxsZekHkH2YERXlA5d44tyqo9Re8hWCOrViyx2pBZqyjle899vHWJUC6kbA4D7EuOoUg5Wtyyv-e5v3oZqZsld9pazNjx-77lGFvWlMkPX.jpg?r=12a"
+    alt="netflix image show"
+    />
+  );
+};
+
+const TitleComponent = () => {
+  return <h2 style={{color:"black", fontSize:"22px"}}> Movie Name: 
+  <span style={{color: "greenyellow"}}> OUR UNIVERSE</span>
+  </h2>
+};
 
 export default App;
